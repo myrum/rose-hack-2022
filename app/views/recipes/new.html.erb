@@ -6,12 +6,25 @@
 <%= form_tag recipes_path, class: 'form' do %>
   <%= label :recipe, :title, 'Recipe Title', class: 'col-form-label' %>
   <%= text_field :recipe, :title, class: 'form-control' %>
+
   <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
   <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
+
+  <%= label :recipe, :ingredients, 'Ingredients', class: 'col-form-label' %>
+  <%= text_field :recipe, :ingredients, placeholder: 'What do we need to make your recipe...', class: 'form-control' %>
+  
+  <%= label :recipe, :info, 'Description', class: 'col-form-label' %>
+  <%= text_field :recipe, :info, placeholder: 'Give instructions here...', class: 'form-control' %>
+
   <%= label :recipe, :difficulty, 'Difficulty', class: 'col-form-label'%>
   <%= select :recipe, :difficulty, [1, 2, 3, 4, 5], {}, {class: 'form-control col-1'} %>
+
   <%= label :recipe, :duration, 'Duration', class: 'col-form-label' %>
   <%= text_field :recipe, :duration, placeholder: 'Enter number of minutes here...', class: 'form-control' %>
+
+   <%= label :recipe, :tags, 'Tags', class: 'col-form-label' %>
+     <%= text_field :recipe, :info, placeholder: 'Vegan, Gluten Free, Dorm-Friendly...', class: 'form-control' %>
+
   <br/>
   <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
   <%= link_to 'Cancel', recipes_path, class: 'btn btn-secondary' %>

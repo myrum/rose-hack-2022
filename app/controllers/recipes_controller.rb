@@ -6,6 +6,9 @@ class RecipesController < ApplicationController
   end
 
   def create
+    @recipe = Recipe.create!(recipe_params)
+    flash[:notice] = "#{@recipe.title} was added. Let's get cookin!"
+    redirect_to recipes_path
   end
 
   def show
@@ -21,6 +24,10 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @recipes = Recipe.all
+  end
+
+  private
+  def recipe_params
+    params.require(:recipe).permit(:title, :category, :info, :ingredients, :difficulty, :duration, :tags)
   end
 end
