@@ -5,6 +5,8 @@ class RecipesController < ApplicationController
   end
 
   def search
+    puts(params[:search])
+    @recipes = Recipe.find_recipe(params[:search])
   end
 
   def create

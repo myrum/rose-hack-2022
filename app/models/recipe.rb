@@ -8,7 +8,8 @@ class Recipe < ApplicationRecord
     end
 
     def self.find_recipe(search_terms)
-        where(category: search_terms)
+        puts("made it")
+        where(title: search_terms)
     end
 
 end
