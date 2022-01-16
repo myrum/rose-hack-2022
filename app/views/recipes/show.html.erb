@@ -41,7 +41,12 @@
                         <p> Difficulty Level:
                             <span class="badge badge-pill badge-secondary"
                                   style="padding-top: 5px; width: auto;">
-                                <%= @recipe.difficulty %>
+
+                                <% @recipe.difficulty.times do %>
+                                    <span style="inline-block">★</span>
+                                <% end %>
+
+
                             </span>
                         </p>
 
