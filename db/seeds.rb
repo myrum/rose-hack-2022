@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+meals = [{:title => 'Aladdin', :type => 'food', :description => "bla bla bla bla"} 
+]
+
+meals.each do |meal|
+Meals.create!(meal)
+end
