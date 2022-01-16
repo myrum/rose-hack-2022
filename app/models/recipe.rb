@@ -5,6 +5,10 @@ class Recipe < ApplicationRecord
         else
             all.order sort_by
         end
-      end
+    end
+
+    def self.find_recipe(search_terms)
+        where(category: search_terms)
+    end
 
 end
