@@ -24,33 +24,36 @@
                         <!-- RECIPE CATEGORY & TAGS -->
                         <span class="badge badge-pill badge-primary"
                               style="padding-top: 5px; width: auto;">
-                              &nbsp; Lunch &nbsp;
+                              &nbsp; <%= @recipe.category %> &nbsp;
                         </span>
                         <span class="badge badge-pill badge-primary"
                               style="padding-top: 5px; width: auto;">
-                              &nbsp; Dorm-Friendly &nbsp;
+                              &nbsp; <%= @recipe.tags %> &nbsp;
                         </span>
 
                         <!-- RECIPE TITLE -->
                         <h5 class="card-title"
                             style="padding-top: 5px; padding-bottom: -20px">
-                            Recipe Title
+                            <%= @recipe.title %>
                         </h5>
 
                         <!-- RECIPE DIFFICULTY LEVEL -->
                         <p> Difficulty Level:
                             <span class="badge badge-pill badge-secondary"
                                   style="padding-top: 5px; width: auto;">
-                                Medium
+                                <%= @recipe.difficulty %>
                             </span>
                         </p>
 
                         <!-- RECIPE DESCRIPTION -->
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            what
+                            <%# <%= @recipe.description %> %>
+
+                            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
 
                             <!-- Duis aute irure dolor in reprehenderit in voluptate velit
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -61,7 +64,7 @@
 
                         <!-- RECIPE DURATION -->
                         <p class="bi bi-clock">
-                            20 minutes
+                            <%= @recipe.duration %>
                         </p>
 
                     </div>
@@ -75,6 +78,7 @@
                                 <h5 class="card-title" style="padding-left: 10px;">
                                     Ingredients
                                 </h5>
+                                <%= @recipe.ingredients %>
                                 <ul>
                                     <li>2oz Tomato Sauce</li>
                                     <li>5oz Shredded Cheese</li>
@@ -86,6 +90,7 @@
                                 <h5 class="card-title" style="padding-left: 10px; padding-top:10px">
                                     Instructions
                                 </h5>
+                                <%= @recipe.info %>
                                 <ol>
                                     <li>Preheat the oven to 350 degrees</li>
                                     <li>Line your baking sheet with parchment paper</li>
