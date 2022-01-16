@@ -46,25 +46,25 @@
                         </p>
 
                         <!-- RECIPE DESCRIPTION -->
-                        <p>
+                        <!-- <p>
                             what
-                            <%# <%= @recipe.description %> %>
 
-                            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-                            <!-- Duis aute irure dolor in reprehenderit in voluptate velit
+                            Duis aute irure dolor in reprehenderit in voluptate velit
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                             occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum. -->
+                            deserunt mollit anim id est laborum.
 
-                        </p>
+                        </p> -->
 
                         <!-- RECIPE DURATION -->
                         <p class="bi bi-clock">
-                            <%= @recipe.duration %>
+                            <%= @recipe.duration %> Minutes
                         </p>
 
                     </div>
@@ -78,23 +78,24 @@
                                 <h5 class="card-title" style="padding-left: 10px;">
                                     Ingredients
                                 </h5>
-                                <%= @recipe.ingredients %>
+
                                 <ul>
-                                    <li>2oz Tomato Sauce</li>
-                                    <li>5oz Shredded Cheese</li>
-                                    <li>1oz Pizza Toppings</li>
+                                    <% @recipe.ingredients.split(',').each do |item| %>
+                                        <li><%= item %></li>
+                                    <% end %>
                                 </ul>
+
                             </li>
 
                             <li class="list-group-item">
                                 <h5 class="card-title" style="padding-left: 10px; padding-top:10px">
                                     Instructions
                                 </h5>
-                                <%= @recipe.info %>
+
                                 <ol>
-                                    <li>Preheat the oven to 350 degrees</li>
-                                    <li>Line your baking sheet with parchment paper</li>
-                                    <li>Flour your station</li>
+                                    <% @recipe.info.split(',').each do |step| %>
+                                        <li><%= step %></li>
+                                    <% end %>
                                 </ol>
                             </li>
 
