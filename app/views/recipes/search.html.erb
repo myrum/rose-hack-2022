@@ -12,9 +12,8 @@
     <!-- <div class="card-body"> -->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <%= form_tag recipes_path, class: 'form' do %>
-                  <%= label :recipe, :title, 'Recipe Title', class: 'col-form-label' %>
-                  <%= text_field :recipe, :title, class: 'form-control' %>
+                  <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
+                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
             </li>
             <li class="list-group-item">
                   <br/>
