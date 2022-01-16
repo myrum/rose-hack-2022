@@ -12,3 +12,15 @@ html {
     text-align: center;
 
 }
+
+.home-background {
+
+    background: url("header background.png");
+
+}
+
+.home-text-shadow {
+
+    text-shadow: -3px 3px 5px #000000;
+
+}
