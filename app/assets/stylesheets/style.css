@@ -16,11 +16,31 @@ html {
 .home-background {
 
     background: url("header background.png");
+    -webkit-filter: brightness(100%);
 
 }
 
-.home-text-shadow {
+.home-background:hover {
 
+    -webkit-filter: brightness(95%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+
+.home-text-title {
+
+    -webkit-filter: brightness(100%);
     text-shadow: -3px 3px 5px #000000;
+
+}
+
+.home-text-p {
+
+    -webkit-filter: brightness(100%);
+    text-shadow: -1px 1px 0px #262626;
 
 }
