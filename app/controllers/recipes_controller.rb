@@ -5,10 +5,29 @@ class RecipesController < ApplicationController
 
   end
 
+  def search
+  end
+
   def create
-    @recipe = Recipe.create!(recipe_params)
-    flash[:notice] = "#{@recipe.title} was added. Let's get cookin!"
-    redirect_to recipes_path
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.title.empty?
+      puts("hey hey hey")
+      flash[:warning] = "Hey! Your recipe needs a title!"
+      redirect_to :action => "new"
+    elsif @recipe.info.empty?
+      flash[:warning] = "Hey! Your recipe needs instructions!"
+      redirect_to :action => "new"
+    elsif @recipe.duration.empty?
+      flash[:warning] = "Hey! We need to know how long your recipe takes!"
+      redirect_to :action => "new"
+    elsif @recipe.ingredients.empty?
+      flash[:warning] = "Hey! What ingredients do we use to make your recipe?"
+      redirect_to :action => "new"
+    else
+      @recipe = Recipe.create!(recipe_params)
+      flash[:notice] = "#{@recipe.title} was added. Let's get cookin!"
+      redirect_to recipes_path
+    end
   end
 
   def show
