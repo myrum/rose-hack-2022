@@ -1,0 +1,27 @@
+<h1>Welcome to Restful Recipes</h1>
+
+<table class="table table-striped col-md-12" id="meals">
+  <thead>
+    <tr>
+      <th>Recipe</th>
+      <th>Category</th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td>
+          <%= recipe.title %>
+        </td>
+        <td>
+          <%= recipe.type %>
+        </td>
+        <td>
+          <%= link_to "More about #{recipe.title}", recipe_path(recipe) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add new recipe', new_recipe_path, :class => 'btn btn-primary' %>
