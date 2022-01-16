@@ -41,6 +41,6 @@ html {
 .home-text-p {
 
     -webkit-filter: brightness(100%);
-    text-shadow: -1px 1px 0px #262626;
+    text-shadow: -1.5px 1.5px 0px #262626;
 
 }
