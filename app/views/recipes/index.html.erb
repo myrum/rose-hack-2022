@@ -2,7 +2,11 @@
 <html>
     <!-- <h1 class="home-header">Welcome to Restful Recipes</h1> -->
 
-<div class="home-background jumbotron bg-cover text-white">
+<body>
+
+<!-- HEADER IMAGE AND TEXT -->
+<div class="home-background jumbotron bg-cover text-white"
+     style="width: 100vh">
     <div class="container py-5 text-center">
         <h1 class="home-text-title display-4 font-weight-bold">
             Come Cook With Us
@@ -24,8 +28,10 @@
     </div>
 </div>
 
+<!-- RANDOM BREAK FOR ID SCROLL TESTING -->
 <hr id="toRecipes">
 
+<!-- RECIPE TABLE -->
 <table class="table table-striped col-md-12" id="meals">
   <thead>
     <tr>
@@ -65,4 +71,7 @@
   </tbody>
 </table>
 <%= link_to 'Add new recipe', new_recipe_path, :class => 'btn btn-primary' %>
+
+</body>
+
 </html>
