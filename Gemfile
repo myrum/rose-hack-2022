@@ -5,6 +5,8 @@ ruby ">= 3.0.3"
 
 gem 'nokogiri', '~> 1.13.1'
 
+gem "sqlite3", "~> 1.4"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
@@ -60,9 +62,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
-  # Use sqlite3 as the database for Active Record
-  gem "sqlite3", "~> 1.4"
-
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -78,6 +77,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.2'
+  # gem 'pg', '~> 1.2.3'
   gem 'rails_12factor'
 end
