@@ -16,6 +16,10 @@
                   <%= label :recipe, :title, 'Recipe Title', class: 'col-form-label' %>
                   <%= text_field :recipe, :title, class: 'form-control' %>
             </li>
+            <!-- <li class="list-group-item">
+                  <%= label :recipe, :description, 'Description', class: 'col-form-label' %>
+                  <%= text_field :recipe, :description, class: 'form-control' %>
+            </li> -->
             <li class="list-group-item">
                   <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
                   <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
@@ -25,7 +29,7 @@
                   <%= text_field :recipe, :ingredients, placeholder: 'What do we need to make your recipe...', class: 'form-control' %>
             </li>
             <li class="list-group-item">
-                  <%= label :recipe, :info, 'Description', class: 'col-form-label' %>
+                  <%= label :recipe, :info, 'Instructions', class: 'col-form-label' %>
                   <%= text_field :recipe, :info, placeholder: 'Give instructions here...', class: 'form-control' %>
             </li>
             <li class="list-group-item">

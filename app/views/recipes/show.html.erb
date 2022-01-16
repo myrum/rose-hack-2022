@@ -24,44 +24,47 @@
                         <!-- RECIPE CATEGORY & TAGS -->
                         <span class="badge badge-pill badge-primary"
                               style="padding-top: 5px; width: auto;">
-                              &nbsp; Lunch &nbsp;
+                              &nbsp; <%= @recipe.category %> &nbsp;
                         </span>
                         <span class="badge badge-pill badge-primary"
                               style="padding-top: 5px; width: auto;">
-                              &nbsp; Dorm-Friendly &nbsp;
+                              &nbsp; <%= @recipe.tags %> &nbsp;
                         </span>
 
                         <!-- RECIPE TITLE -->
                         <h5 class="card-title"
                             style="padding-top: 5px; padding-bottom: -20px">
-                            Recipe Title
+                            <%= @recipe.title %>
                         </h5>
 
                         <!-- RECIPE DIFFICULTY LEVEL -->
                         <p> Difficulty Level:
                             <span class="badge badge-pill badge-secondary"
                                   style="padding-top: 5px; width: auto;">
-                                Medium
+                                <%= @recipe.difficulty %>
                             </span>
                         </p>
 
                         <!-- RECIPE DESCRIPTION -->
-                        <p>
+                        <!-- <p>
+                            what
+
+
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-                            <!-- Duis aute irure dolor in reprehenderit in voluptate velit
+                            Duis aute irure dolor in reprehenderit in voluptate velit
                             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                             occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum. -->
+                            deserunt mollit anim id est laborum.
 
-                        </p>
+                        </p> -->
 
                         <!-- RECIPE DURATION -->
                         <p class="bi bi-clock">
-                            20 minutes
+                            <%= @recipe.duration %> Minutes
                         </p>
 
                     </div>
@@ -75,21 +78,24 @@
                                 <h5 class="card-title" style="padding-left: 10px;">
                                     Ingredients
                                 </h5>
+
                                 <ul>
-                                    <li>2oz Tomato Sauce</li>
-                                    <li>5oz Shredded Cheese</li>
-                                    <li>1oz Pizza Toppings</li>
+                                    <% @recipe.ingredients.split(',').each do |item| %>
+                                        <li><%= item %></li>
+                                    <% end %>
                                 </ul>
+
                             </li>
 
                             <li class="list-group-item">
                                 <h5 class="card-title" style="padding-left: 10px; padding-top:10px">
                                     Instructions
                                 </h5>
+
                                 <ol>
-                                    <li>Preheat the oven to 350 degrees</li>
-                                    <li>Line your baking sheet with parchment paper</li>
-                                    <li>Flour your station</li>
+                                    <% @recipe.info.split(',').each do |step| %>
+                                        <li><%= step %></li>
+                                    <% end %>
                                 </ol>
                             </li>
 
