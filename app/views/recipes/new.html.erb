@@ -6,7 +6,7 @@
 <div class="card">
 
     <div class="card-header">
-        <h5 class="card-title">Add New Recipe</h5>
+        <h5 class="card-title display-4">Add New Recipe</h5>
     </div>
 
     <!-- <div class="card-body"> -->
@@ -26,10 +26,12 @@
             </li>
             <li class="list-group-item">
                   <%= label :recipe, :ingredients, 'Ingredients', class: 'col-form-label' %>
+                  <span class="text-muted form-subtitle"><small>(please separate all values with a comma)</small></span>
                   <%= text_field :recipe, :ingredients, placeholder: 'What do we need to make your recipe...', class: 'form-control' %>
             </li>
             <li class="list-group-item">
                   <%= label :recipe, :info, 'Instructions', class: 'col-form-label' %>
+                  <span class="text-muted form-subtitle"><small>(please separate all steps with a comma)</small></span>
                   <%= text_field :recipe, :info, placeholder: 'Give instructions here...', class: 'form-control' %>
             </li>
             <li class="list-group-item">
