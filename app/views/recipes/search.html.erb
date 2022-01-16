@@ -12,8 +12,9 @@
     <!-- <div class="card-body"> -->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
+            <%= form_tag search_path, class: 'form' do %>
                   <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
-                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
+                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-3'} %>
             </li>
             <li class="list-group-item">
                   <br/>
@@ -28,6 +29,11 @@
 
 </div>
 
-</body>
+<div>
+  <% if params[:commit] == 'Search' %>
+    <%= render :partial => 'recipe_list', :locals => { :recipe => @recipe } %>
+  <% end %>
+</div>
 
+</body>
 </html>
