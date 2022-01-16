@@ -17,12 +17,13 @@
                   <%= text_field :recipe, :title, class: 'form-control' %>
             </li>
             <!-- <li class="list-group-item">
-                  <%= label :recipe, :description, 'Description', class: 'col-form-label' %>
-                  <%= text_field :recipe, :description, class: 'form-control' %>
+                < % = label :recipe, :description, 'Description', class: 'col-form-label' %>
+                < % = text_field :recipe, :description, class: 'form-control' %>
             </li> -->
-            <li class="list-group-item">
+            <li class="list-group-item"
+                style="width:100%;">
                   <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
-                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
+                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-3'} %>
             </li>
             <li class="list-group-item">
                   <%= label :recipe, :ingredients, 'Ingredients', class: 'col-form-label' %>
@@ -34,9 +35,10 @@
                   <span class="text-muted form-subtitle"><small>(please separate all steps with a comma)</small></span>
                   <%= text_field :recipe, :info, placeholder: 'Give instructions here...', class: 'form-control' %>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item"
+                style="width:100%;">
                   <%= label :recipe, :difficulty, 'Difficulty', class: 'col-form-label'%>
-                  <%= select :recipe, :difficulty, [1, 2, 3, 4, 5], {}, {class: 'form-control col-1'} %>
+                  <%= select :recipe, :difficulty, ['☆', '☆☆', '☆☆☆', '☆☆☆☆', '☆☆☆☆☆'], {}, {class: 'form-control col-2'} %>
             </li>
             <li class="list-group-item">
                   <%= label :recipe, :duration, 'Duration', class: 'col-form-label' %>
