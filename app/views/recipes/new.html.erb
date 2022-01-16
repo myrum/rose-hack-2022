@@ -1,46 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<<<<<<< Updated upstream
-    <h1>Add New Recipe</h1>
+<h1>Add New Recipe</h1>
 
-    <!-- <table class="table table-striped col-md-12" id="meals">
-      <thead>
-        <tr>
-          <th>Recipe</th>
-          <th>Category</th>
-          <th>More Info</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @recipes.each do |recipe| %>
-          <tr>
-            <td>
-              <%= recipe.title %>
-            </td>
-            <td>
-              <%= recipe.category %>
-            </td>
-            <td>
-              <%= link_to "More about #{recipe.title}", recipe_path(recipe) %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <%= link_to 'Add new recipe', new_recipe_path, :class => 'btn btn-primary' %> -->
-
-</html>
-=======
 <%= form_tag recipes_path, class: 'form' do %>
-  <%= label :movie, :title, 'Title', class: 'col-form-label' %>
-  <%= text_field :movie, :title, class: 'form-control' %>
-  <%= label :movie, :rating, 'Rating', class: 'col-form-label' %>
-  <%= select :movie, :rating, ['G','PG','PG-13','R'], {}, {class: 'form-control col-1'} %>
-  <%= label :movie, :release_date, 'Released On', class: 'col-form-label' %>
-  <%= date_select :movie, :release_date, {}, class: 'form-control col-2 d-inline' %>
+  <%= label :recipe, :title, 'Recipe Title', class: 'col-form-label' %>
+  <%= text_field :recipe, :title, class: 'form-control' %>
+  <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
+  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
+  <%= label :recipe, :difficulty, 'Difficulty', class: 'col-form-label'%>
+  <%= select :recipe, :difficulty, [1, 2, 3, 4, 5], {}, {class: 'form-control col-1'} %>
+  <%= label :recipe, :duration, 'Duration', class: 'col-form-label' %>
+  <%= text_field :recipe, :duration, placeholder: 'Enter number of minutes here...', class: 'form-control' %>
   <br/>
   <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
-  <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Cancel', recipes_path, class: 'btn btn-secondary' %>
 <% end %>
->>>>>>> Stashed changes
+
+</html>
