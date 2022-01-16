@@ -17,32 +17,8 @@
                   <%= text_field :recipe, :title, class: 'form-control' %>
             </li>
             <li class="list-group-item">
-                  <%= label :recipe, :category, 'Category', class: 'col-form-label' %>
-                  <%= select :recipe, :category, ['Breakfast', 'Lunch', 'Dinner', 'Drink', 'Snack'], {}, {class: 'form-control col-2'} %>
-            </li>
-            <li class="list-group-item">
-                  <%= label :recipe, :ingredients, 'Ingredients', class: 'col-form-label' %>
-                  <%= text_field :recipe, :ingredients, placeholder: 'What do we need to make your recipe...', class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-                  <%= label :recipe, :info, 'Description', class: 'col-form-label' %>
-                  <%= text_field :recipe, :info, placeholder: 'Give instructions here...', class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-                  <%= label :recipe, :difficulty, 'Difficulty', class: 'col-form-label'%>
-                  <%= select :recipe, :difficulty, [1, 2, 3, 4, 5], {}, {class: 'form-control col-1'} %>
-            </li>
-            <li class="list-group-item">
-                  <%= label :recipe, :duration, 'Duration', class: 'col-form-label' %>
-                  <%= text_field :recipe, :duration, placeholder: 'Enter number of minutes here...', class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
-                   <%= label :recipe, :tags, 'Tags', class: 'col-form-label' %>
-                     <%= text_field :recipe, :tags, placeholder: 'Vegan, Gluten Free, Dorm-Friendly...', class: 'form-control' %>
-            </li>
-            <li class="list-group-item">
                   <br/>
-                  <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
+                  <%= submit_tag 'Search', class: 'btn btn-primary' %>
                   <%= link_to 'Cancel', recipes_path, class: 'btn btn-secondary' %>
                 <% end %>
             </li>

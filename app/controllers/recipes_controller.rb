@@ -2,7 +2,6 @@ class RecipesController < ApplicationController
   def index
     @sort_by = params[:sort_by]
     @recipes = Recipe.sorted(@sort_by)
-
   end
 
   def search
