@@ -5,4 +5,8 @@ class RecipesController < ApplicationController
 
   def create
   end
+
+  def new
+    @recipes = Recipe.all
+  end
 end
