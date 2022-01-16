@@ -5,6 +5,7 @@
     <tr>
       <th>Recipe</th>
       <th>Category</th>
+      <th>Difficulty</th>
       <th>More Info</th>
     </tr>
   </thead>
@@ -16,6 +17,9 @@
         </td>
         <td>
           <%= recipe.category %>
+        </td>
+        <td>
+            <%= recipe.difficulty%>
         </td>
         <td>
           <%= link_to "More about #{recipe.title}", recipe_path(recipe) %>
