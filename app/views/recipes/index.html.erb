@@ -1,41 +1,44 @@
-<h1>Welcome to Restful Recipes</h1>
+<!Doctype>
+<html>
+    <h1 class="home-header">Welcome to Restful Recipes</h1>
 
-<table class="table table-striped col-md-12" id="meals">
-  <thead>
-    <tr>
-      <th>
-      <%= link_to 'Recipe', recipes_path({sort_by: 'title'}), class: ('text-info' if @sort_by == 'title') %>
-      </th>
-      <th>Category</th>
-      <th>
-      <%= link_to 'Difficulty', recipes_path({sort_by: 'difficulty'}), class: ('text-info' if @sort_by == 'difficulty') %>
-      </th>
-      <th>
-      <%= link_to 'Duration', recipes_path({sort_by: 'duration'}), class: ('text-info' if @sort_by == 'duration') %>
-      </th>
-      <th>See More</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td>
-          <%= recipe.title %>
-        </td>
-        <td>
-          <%= recipe.category %>
-        </td>
-        <td>
-            <%= recipe.difficulty%>
-        </td>
-        <td>
-            <%= recipe.duration %>
-        </td>
-        <td>
-          <%= link_to "More about #{recipe.title}", recipe_path(recipe) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'Add new recipe', new_recipe_path, :class => 'btn btn-primary' %>
+    <table class="table table-striped col-md-12" id="meals">
+      <thead>
+        <tr>
+          <th>
+          <%= link_to 'Recipe', recipes_path({sort_by: 'title'}), class: ('text-info' if @sort_by == 'title') %>
+          </th>
+          <th>Category</th>
+          <th>
+          <%= link_to 'Difficulty', recipes_path({sort_by: 'difficulty'}), class: ('text-info' if @sort_by == 'difficulty') %>
+          </th>
+          <th>
+          <%= link_to 'Duration', recipes_path({sort_by: 'duration'}), class: ('text-info' if @sort_by == 'duration') %>
+          </th>
+          <th>See More</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipes.each do |recipe| %>
+          <tr>
+            <td>
+              <%= recipe.title %>
+            </td>
+            <td>
+              <%= recipe.category %>
+            </td>
+            <td>
+                <%= recipe.difficulty%>
+            </td>
+            <td>
+                <%= recipe.duration %>
+            </td>
+            <td>
+              <%= link_to "More about #{recipe.title}", recipe_path(recipe) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'Add new recipe', new_recipe_path, :class => 'btn btn-primary' %>
+</html>
