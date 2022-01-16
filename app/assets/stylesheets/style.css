@@ -3,3 +3,12 @@ html {
     background-color: #efefef;
 
 }
+
+.home-header {
+
+    font-family: 'Special Elite', cursive;
+    font-size: 72px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+
+}
