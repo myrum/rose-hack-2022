@@ -3,7 +3,9 @@
 <table class="table table-striped col-md-12" id="meals">
   <thead>
     <tr>
-      <th>Recipe</th>
+      <th>
+      <%= link_to 'Recipe', recipes_path({sort_by: 'title'}), class: ('text-info' if @sort_by == 'title') %>
+      </th>
       <th>Category</th>
       <th>Difficulty</th>
       <th>More Info</th>

@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @sort_by = params[:sort_by]
+    @recipes = Recipe.sorted(@sort_by)
+
   end
 
   def create

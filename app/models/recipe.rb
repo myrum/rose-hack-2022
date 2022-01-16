@@ -1,5 +1,10 @@
 class Recipe < ApplicationRecord
-    def self.all_ratings
-        [1, 2, 3, 4, 5]
+    def self.sorted(sort_by)
+        if sort_by.nil?
+            self.all
+        else
+            all.order sort_by
+        end
       end
+
 end
