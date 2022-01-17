@@ -16,7 +16,7 @@ A platform to help college students make their favorite homemade meals in their 
 
 ## Table of Contents
 * [General Info](#general-info)
-* [Technologies & Frameworks](#technologies-and-frameworks)
+* [Technologies & Frameworks](#technologies-&-frameworks)
 * [Usage](#usage)
 * [Features](#features)
 
