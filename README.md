@@ -16,7 +16,7 @@ A platform to help college students make their favorite homemade meals in their 
 
 ## Table of Contents
 * [General Info](#general-info)
-* [Technologies & Frameworks](#technologies-&-frameworks)
+* [Technologies](#technologies)
 * [Usage](#usage)
 * [Features](#features)
 
@@ -24,7 +24,7 @@ A platform to help college students make their favorite homemade meals in their 
 
 This project was created using Ruby on Rails, Bootstrap, SQLite, and basic HTML/CSS.
 
-## Technologies & Frameworks
+## Technologies
 
 - Ruby 3.1.0
 - Rails 7.0.1
