@@ -12,7 +12,7 @@
     <!-- <div class="card-body"> -->
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <%= form_tag recipes_path, class: 'form' do %>
+                <%= form_tag recipes_path, :method => :post, class: 'form' do %>
                   <%= label :recipe, :title, 'Recipe Title', class: 'col-form-label' %>
                   <%= text_field :recipe, :title, class: 'form-control' %>
             </li>
@@ -38,7 +38,7 @@
             <li class="list-group-item"
                 style="width:100%;">
                   <%= label :recipe, :difficulty, 'Difficulty', class: 'col-form-label'%>
-                  <%= select :recipe, :difficulty, ['☆', '☆☆', '☆☆☆', '☆☆☆☆', '☆☆☆☆☆'], {}, {class: 'form-control col-2'} %>
+                  <%= select :recipe, :difficulty, ['1', '2', '3', '4', '5'], {}, {class: 'form-control col-2'} %>
             </li>
             <li class="list-group-item">
                   <%= label :recipe, :duration, 'Duration', class: 'col-form-label' %>

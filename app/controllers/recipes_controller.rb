@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
   end
 
   def search
+    puts("here are results: ")
     puts(params[:search])
     @recipes = Recipe.find_recipe(params[:search])
   end
@@ -18,7 +19,7 @@ class RecipesController < ApplicationController
     elsif @recipe.info.empty?
       flash[:warning] = "Hey! Your recipe needs instructions!"
       redirect_to :action => "new"
-    elsif @recipe.duration.empty?
+    elsif @recipe.duration.nil?
       flash[:warning] = "Hey! We need to know how long your recipe takes!"
       redirect_to :action => "new"
     elsif @recipe.ingredients.empty?
